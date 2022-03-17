@@ -24,9 +24,7 @@ Väldigt lite, jag var hela tiden tvungen att kolla om föreläsningarna och fö
 Allt? Mitt tålamod har tyvärr varit betydligt kortare de här sista två månaderna. Min rygg har värkt konstant och så har mitt privata liv samtidigt vänts uppochner. Lite svårt att fokusera med allt runt omkring men det är väl sånt som händer hela tiden. Bara att ta sig igenom det och försöka göra sitt bästa med vad man har och/eller kan ta till sig.
 
 ### Vad har du lärt dig:
-Massor. Som jag har sagt tidigare, jag tror det har märkts att jag verkligen har lärt mig mycket. Det beror till stor del på att
-det vi gjort har vi upprepat flera gånger. Vi har byggt upp backenden flera gånger vilket gör att man hinner lära sig.
-I backendtesterna byggde vi flera test vilket gör att man hinner lära sig det.
+
 
 ### Möjligheter med de kunskaper du fått under kursen:
 Mer förståelse för sambandet mellan backend och frontend. Hur de jobbar och hittar varandra. Jag skulle inte säga att min kunskap blivit enorm på de här veckorna men jag kan mer än när kursen startade iallafall.

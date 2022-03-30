@@ -1,31 +1,31 @@
 import http from '../taskAPI'
 
-const createTodo = (newName) => {
-    return http.post('/createtodo', newName)
+const createTodo = (newUser) => {
+    return http.post('/createTodo', newUser)
 }
 
-const allData = () => {
-    return http.get('/alldata')
+const getAllTodos = () => {
+    return http.get('/getAllTodos')
 }
 
-const updateDataByName = (changedData) => {
-    return http.put('/updatedatabyname', changedData)
+const updateDataByName = (changeUser) => {
+    return http.put('/updateDataByName', changeUser)
 }
 
 const deleteDataByName = (name) => {
-    return http.delete(`/deletedatabyname/${name}`)
+    return http.delete(`/deleteDataByName/${name}`)
 }
 
 const getUserByName = (name) => {
-    return http.get(`/getuserbyname/${name}`)
+    return http.get(`/getUserByName/${name}`)
 }
 
 const todoIsDone = (id) => {
-    return http.put(`/todoisdone/${id}`)
+    return http.put(`/todoIsDone/${id}`)
 }
 
 export default {
-    allData,
+    getAllTodos,
     createTodo,
     updateDataByName,
     deleteDataByName,

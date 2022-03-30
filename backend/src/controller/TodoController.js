@@ -1,25 +1,28 @@
-import TodoData from '../data/TodoData.js'
+import TodoData from '../data/todoData.js'
 
 const createTodo = (req, res) => {
-    const { task, name } = req.body
-    const newObject = {
-        name: name,
-        task: task,
-        id: TodoData.length
+    const {task, name} = req.body
+    if (name && task){
+        const newObject = {
+            id: TodoData.length,
+            name: name,
+            task: task,
+            done: false,
+        }
+        TodoData.push(newObject)
+        res.status(201).send(TodoData)
     }
-    TodoData.push(newObject)
-    res.status(201).send(TodoData[TodoData.length -1])
 }
 
-const allData = (req, res) => {
+const getAllTodos = (req, res) => {
     res.status(200).send(TodoData)
 }
 
 const userNames = () => {
     const names = []
-    TodoData.forEach(todo => {
+    TodoData.forEach(user => {
         names.push({
-            name: todo.name
+            name: user.name
         })
     })
     return names
@@ -31,7 +34,7 @@ const getUserNames = (req, res) => {
 }
 
 const searchUserByName = (name) => {
-    let object = `Could not find "${ name }" in the database`
+    let object = `Could not find "${name}" in the database`
     TodoData.forEach(todo => {
         if (name === todo.name) {
             object = todo
@@ -61,7 +64,7 @@ const modifyUserByName = (name, newName, task) => {
 }
 
 const updateUserByName = (req, res) => {
-    const { name, newName, task } = req.body
+    const {name, newName, task} = req.body
     const response = modifyUserByName(name, newName, task)
     res.status(202).send(response)
 }
@@ -87,11 +90,69 @@ const deleteUserByName = (req, res) => {
     res.status(200).send(responseFromDB)
 }
 
+const modifyTaskDone = (id, name) => {
+    let object = `The task of "${name}" is not longer on the list`
+    TodoData.forEach(todo => {
+        if (name === todo.name) {
+            todo.done = true
+            object = todo
+            return todo
+        }
+    })
+    return object
+}
+
+
+const taskIsDone = () => {
+    const tasksDone = []
+    TodoData.forEach(todo => {
+        if (todo.done === true)
+            tasksDone.push(todo)
+    })
+    return tasksDone
+}
+
+const getTasksAreDone = (req, res) => {
+    const responseFromDb = taskIsDone()
+    res.status(200).send(responseFromDb)
+}
+
+
+const updateDone = (req, res) => {
+    const {id, name} = req.body
+    const response = modifyTaskDone(id, name)
+    res.status(202).send(response)
+}
+
+const taskIsPending = () => {
+    const tasksPending = []
+    TodoData.forEach(todo => {
+        if (todo.done === false)
+            tasksPending.push(todo)
+    })
+    return tasksPending
+}
+
+const getTasksArePending = (req, res) => {
+    const responseFromDb = taskIsPending()
+    res.status(200).send(responseFromDb)
+}
+
+const toggleTaskDone = (req, res) => {
+    const id = Number(req.params.id)
+    TodoData[id].done = !TodoData[id].done
+    res.status(202).send(TodoData[id])
+}
+
 export default {
     createTodo,
-    allData,
+    getAllTodos,
     getUserNames,
     getUserByName,
     updateUserByName,
-    deleteUserByName
+    deleteUserByName,
+    updateDone,
+    getTasksAreDone,
+    getTasksArePending,
+    toggleTaskDone
 }

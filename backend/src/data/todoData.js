@@ -1,23 +1,27 @@
 const TodoData = [
     {
+        id: 0,
         name: 'Kaeya',
         task: 'Dammsuga',
-        id: 0
+        done: false
     },
     {
+        id: 1,
         name: 'Sucrose',
         task: 'Köpa hö',
-        id: 1
+        done: false
     },
     {
+        id: 2,
         name: 'Barbara',
         task: 'Sånglektioner',
-        id: 2
+        done: false
     },
     {
+        id: 3,
         name: 'Eri',
         task: 'Tvättstuga',
-        id: 3
+        done: false
     },
 ]
 

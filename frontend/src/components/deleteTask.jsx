@@ -6,7 +6,7 @@ const DeleteData = () => {
     const [name, setName] = useState('Suzume')
 
     const sendDataToAPI = () => {
-        todoService.deleteDataByName(name)
+        todoService.deleteTodoDataByName(name)
             .then(response => {
                 setData(response.data)
             })

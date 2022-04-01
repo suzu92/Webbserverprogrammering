@@ -8,11 +8,11 @@ const getAllTodos = () => {
     return http.get('/getAllTodos')
 }
 
-const updateDataByName = (changeUser) => {
+const updateTodoDataByName = (changeUser) => {
     return http.put('/updateDataByName', changeUser)
 }
 
-const deleteDataByName = (name) => {
+const deleteTodoDataByName = (name) => {
     return http.delete(`/deleteDataByName/${name}`)
 }
 
@@ -27,8 +27,8 @@ const todoIsDone = (id) => {
 export default {
     getAllTodos,
     createTodo,
-    updateDataByName,
-    deleteDataByName,
+    updateTodoDataByName,
+    deleteTodoDataByName,
     getUserByName,
     todoIsDone
 }

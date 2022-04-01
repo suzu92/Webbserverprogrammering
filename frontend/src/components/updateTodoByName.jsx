@@ -14,7 +14,7 @@ const UpdateTodoByName = () => {
             'newName': newName,
             'task': task
         }
-        TodoService.updateDataByName(changeUser)
+        TodoService.updateTodoDataByName(changeUser)
             .then(response => {
                 setData(response.data)
             })

@@ -17,7 +17,7 @@ const GetAllTodo = () => {
         <>
             <form>
                 <h2>All Tasks:</h2>
-                <button className='btn-add' onClick={() => fetchDataFromExternalAPI()}>Fetch all tasks</button>
+                <button type='button' className='btn-add' onClick={() => fetchDataFromExternalAPI()}>Fetch all tasks</button>
                 <DataItems task={data}/>
             </form>
         </>

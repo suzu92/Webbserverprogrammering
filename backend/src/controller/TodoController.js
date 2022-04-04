@@ -14,7 +14,7 @@ const createTodo = (req, res) => {
     }
 }
 
-const getAllTodos = (req, res) => {
+const getAllTodo = (req, res) => {
     res.status(200).send(TodoData)
 }
 
@@ -146,7 +146,7 @@ const toggleTaskDone = (req, res) => {
 
 export default {
     createTodo,
-    getAllTodos,
+    getAllTodo,
     getUserNames,
     getUserByName,
     updateUserByName,

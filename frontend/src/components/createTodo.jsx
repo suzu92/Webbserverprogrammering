@@ -2,7 +2,7 @@ import {useState} from "react";
 import todoService from "../utils/api/services/todoService";
 import DataItems from "./DataItems";
 
-const CreateTodo = (props) => {
+const CreateTodo = () => {
     const [data, setData] = useState([])
     const [name, setName] = useState('')
     const [task, setTask] = useState('')

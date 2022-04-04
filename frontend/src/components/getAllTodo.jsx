@@ -6,7 +6,7 @@ const GetAllTodo = () => {
     const [data, setData] = useState([])
 
     const fetchDataFromExternalAPI = () => {
-        todoService.getAllTodos()
+        todoService.getAllTodo()
             .then(response => {
                 setData(response.data)
             })
@@ -17,7 +17,7 @@ const GetAllTodo = () => {
         <>
             <form>
                 <h2>All Tasks:</h2>
-                <button type='button' className='btn-add' onClick={() => fetchDataFromExternalAPI()}>Fetch all tasks</button>
+                <button type="button" className='btn-add' onClick={() => fetchDataFromExternalAPI()}>Fetch all tasks</button>
                 <DataItems task={data}/>
             </form>
         </>

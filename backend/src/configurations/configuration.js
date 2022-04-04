@@ -1,7 +1,7 @@
 import dotenv from 'dotenv'
 
 dotenv.config()
-const port = process.env.SERVER_PORT || 8080
+const port = process.env.SERVER_PORT || 3001
 
 const connectToPort = (app) => {
     app.listen(port, () => {

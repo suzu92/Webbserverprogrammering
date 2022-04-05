@@ -6,7 +6,7 @@ const GetAllTodo = () => {
     const [data, setData] = useState([])
 
     const fetchDataFromExternalAPI = () => {
-        todoService.getAllTodo()
+        todoService.getAllTodos()
             .then(response => {
                 setData(response.data)
             })

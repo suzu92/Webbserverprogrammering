@@ -22,11 +22,11 @@ const updatedUser = {
     task: "Diska"
 }
 
-const getAllTodo = () => {
+const getAllTodos = () => {
     describe('Test to get array of all data (GET)', () => {
         it('should expect array of data to be returned', (done) => {
             Chai.request(app)
-                .get('/getAllTodo')
+                .get('/getAllTodos')
                 .end((error, res) => {
                     expect(res.status).to.equal(200)
                     const body = res.body
@@ -182,7 +182,7 @@ const deleteDataThatDontExist = () => {
 
 
 describe('test for existing data routes', () => {
-    getAllTodo()
+    getAllTodos()
     getUserNames()
     getUserByName()
     checkIfUserDoNotExist(newUser.name)

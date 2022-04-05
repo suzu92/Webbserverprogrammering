@@ -6,7 +6,7 @@ import UserRoutes from "./routes/TodoRoutes.js";
 
 // Initiate ExpressAPP
 const app = express()
-ApplyMiddlewares(app)
+ApplyMiddlewares.apply(app)
 
 AliveRoutes.routes(app)
 UserRoutes.routes(app)

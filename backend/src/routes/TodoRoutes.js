@@ -6,7 +6,7 @@ const routes = (app) => {
     app.post('/createTodo/', TodoController.createTodo)
 
 //READ
-    app.get('/getAllTodo', TodoController.getAllTodo)
+    app.get('/getAllTodos', TodoController.getAllTodos)
     app.get('/getUserNames/name', TodoController.getUserNames)
     app.get('/getUserByName/:name', TodoController.getUserByName)
     app.get('/getAllTaskAreDone/', TodoController.getTasksAreDone)

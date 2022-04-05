@@ -4,8 +4,8 @@ const createTodo = (newUser) => {
     return http.post('/createTodo', newUser)
 }
 
-const getAllTodo = () => {
-    return http.get('/getAllTodo')
+const getAllTodos = () => {
+    return http.get('/getAllTodos')
 }
 
 const updateTodoDataByName = (changeUser) => {
@@ -25,7 +25,7 @@ const todoIsDone = (id) => {
 }
 
 export default {
-    getAllTodo,
+    getAllTodos,
     createTodo,
     updateTodoDataByName,
     deleteTodoDataByName,

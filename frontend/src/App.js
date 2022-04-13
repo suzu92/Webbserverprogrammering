@@ -1,22 +1,15 @@
-import './App.css';
-import Header from "./components/Header";
-import CreateTodo from "./components/createTodo";
-import UpdateTodoByName from "./components/updateTodoByName";
-import GetAllTodo from "./components/getAllTodo";
-import GetUserByName from "./components/getTodoByName";
-import DeleteData from "./components/deleteTask";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import TodoView from "./views/TodoView/TodoView";
+
 
 function App() {
-
 
     return (
         <>
             <Header/>
-            <CreateTodo/>
-            <UpdateTodoByName/>
-            <GetAllTodo/>
-            <GetUserByName/>
-            <DeleteData/>
+            <TodoView/>
+            <Footer/>
         </>
     );
 }

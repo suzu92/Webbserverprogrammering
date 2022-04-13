@@ -1,7 +1,7 @@
 import Axios from 'axios'
 
-const taskAPI = Axios.create ({
+const TodoApi = Axios.create({
     baseURL: 'http://localhost:3001'
 })
 
-export default taskAPI
+export default TodoApi

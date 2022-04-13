@@ -25,19 +25,38 @@
 			"response": []
 		},
 		{
-			"name": "AllData",
+			"name": "CreateTodo",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3001/alldata",
+					"raw": "http://localhost:3001/createTodo",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3001",
 					"path": [
-						"alldata"
+						"createTodo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/getAllTodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"getAllTodos"
 					]
 				}
 			},
@@ -69,7 +88,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3001/getuserbyname/Kaeya",
+					"raw": "http://localhost:3001/getuserbyname/Sucrose",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -77,85 +96,103 @@
 					"port": "3001",
 					"path": [
 						"getuserbyname",
-						"Kaeya"
+						"Sucrose"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "IfUserDontExist",
+			"name": "AllTasksDone",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3001/getuserbyname/Kalle",
+					"raw": "http://localhost:3001/getAllTaskAreDone",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3001",
 					"path": [
-						"getuserbyname",
-						"Kalle"
+						"getAllTaskAreDone"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "CreateTodo",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3001/createtodo",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3001",
-					"path": [
-						"createtodo"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "CheckIfUserExist",
+			"name": "TasksPending",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3001/getuserbyname/Kalle",
+					"raw": "http://localhost:3001/getAllTaskArePending",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3001",
 					"path": [
-						"getuserbyname",
-						"Kalle"
+						"getAllTaskArePending"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "UpdateUserName",
+			"name": "UpdateTodoByName",
 			"request": {
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3001/updatedatabyname",
+					"raw": "http://localhost:3001/updateTodoDataByName",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3001",
 					"path": [
-						"updatedatabyname"
+						"updateTodoDataByName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TaskDone",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/todoDone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"todoDone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TaskDoneID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/todoAreDone/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"todoAreDone",
+						"1"
 					]
 				}
 			},
@@ -167,35 +204,15 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3001/deletedatabyname/Kaeya",
+					"raw": "http://localhost:3001/deleteTodoDataByName/Kaeya",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3001",
 					"path": [
-						"deletedatabyname",
+						"deleteTodoDataByName",
 						"Kaeya"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "DeleteDataNameDontExist",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3001/deletedatabyname/Kalle",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3001",
-					"path": [
-						"deletedatabyname",
-						"Kalle"
 					]
 				}
 			},

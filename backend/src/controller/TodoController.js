@@ -34,7 +34,7 @@ const getUserNames = (req, res) => {
 }
 
 const searchUserByName = (name) => {
-    let object = `Could not find "${name}" in the database`
+    let object = `Could not find "${name}"`
     TodoData.forEach(todo => {
         if (name === todo.name) {
             object = todo
@@ -51,7 +51,7 @@ const getUserByName = (req, res) => {
 }
 
 const modifyUserByName = (name, newName, task) => {
-    let object = `Could not find "${ name }" in database`
+    let object = `Could not find "${ name }"`
     TodoData.forEach(todo => {
         if (name === todo.name) {
             todo.name = newName
@@ -74,13 +74,13 @@ const removeUserByName = (name) => {
 
     for (let i = 0; i < TodoData.length; i++) {
         if (name === TodoData[i].name) {
-            text += `was deleted from this database!`
+            text += `was deleted!`
             TodoData.splice(i, 1)
             return text
         }
     }
 
-    text += `don't exist in this database!`
+    text += `is no longer in this database!`
     return text
 }
 
@@ -91,7 +91,7 @@ const deleteUserByName = (req, res) => {
 }
 
 const modifyTaskDone = (id, name) => {
-    let object = `The task of "${name}" is not longer on the list`
+    let object = `The task of "${name}" is removed`
     TodoData.forEach(todo => {
         if (name === todo.name) {
             todo.done = true

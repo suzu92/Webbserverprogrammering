@@ -1,9 +1,9 @@
-import http from '../taskAPI'
+import http from '../TodoApi'
 
 const alive = () => {
     return http.get('/')
 }
 
 export default {
-    alive,
+    alive
 }

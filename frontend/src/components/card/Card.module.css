@@ -1,0 +1,43 @@
+.layoutList {
+    width: 50em;
+    max-width: 50%;
+    margin: 0.2em auto;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.nameFont {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.todoFont {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.done {
+    text-decoration: line-through;
+    margin: 0;
+    padding: 0;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    background: darkslategrey;
+    color: white;
+    padding: 1.5em;
+    margin: 2em;
+    border-radius: 7px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

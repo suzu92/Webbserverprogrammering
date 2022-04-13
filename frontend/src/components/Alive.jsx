@@ -1,30 +1,26 @@
+import AliveService from "../utils/api/services/AliveService.js";
 import {useState} from "react";
-import aliveService from '../utils/api/services/aliveService'
 
 const Alive = () => {
     const [data, setData] = useState('')
 
-    function fetchDataFromExternalAPI (){
-        aliveService.alive()
-            .then((response) => {
+    const checkApiStatus = () => {
+        AliveService.alive()
+            .then(response => {
+                console.log(response.data)
                 setData(response.data)
             })
-            .catch((error) => console.log(error))
-    }
-
-    function displayData(){
-        if (data.length !==0) {
-            return <h2>Response from API "{data}"</h2>
-        }
+            .catch(error => console.log(error))
     }
 
     return (
-        <>
-            <h1>Alive</h1>
-            <button onClick={() => fetchDataFromExternalAPI()}>Make API call</button>
-            {displayData()}
-        </>
-    )
+        <div>
+            <button style={{fontWeight: "600", margin: "auto", display: "block", borderRadius: "7px", border: "none", padding:"5px, 10px", color: "white", backgroundColor: "darkslategray"}} onClick={checkApiStatus}>
+                API
+            </button>
+            <h3>{data}</h3>
+        </div>
+    );
 }
 
-export default Alive
+export default Alive;

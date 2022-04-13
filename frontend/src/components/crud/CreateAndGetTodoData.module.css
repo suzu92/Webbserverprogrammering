@@ -1,0 +1,22 @@
+.inputAdd {
+    margin: 0.5em auto;
+    display: block;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.btnAdd {
+    margin: auto;
+    display: block;
+    color: white;
+    background: darkslategrey;
+    border-radius: 7px;
+    padding: 5px 10px;
+    border: none;
+    font-weight: 600;
+}
+
+.btnAdd:hover {
+    opacity: 0.5;
+}

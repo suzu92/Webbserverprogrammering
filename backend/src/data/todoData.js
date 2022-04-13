@@ -1,4 +1,4 @@
-const TodoData = [
+const todoData = [
     {
         id: 0,
         name: 'Kaeya',
@@ -25,4 +25,4 @@ const TodoData = [
     },
 ]
 
-export default TodoData
+export default todoData

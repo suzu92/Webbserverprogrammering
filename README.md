@@ -10,6 +10,9 @@ Har som tidigare bara gjort en list variant på min iPad som jag sen bockat av.
 
 Jag började med att skapa backend, först med Alive för att se om jag kunde ansluta till APIet. Gick sen vidare till CRUD och såg till att de fungerade i postman. Hade en hel del strul med dessa i början och det tog en stund innan jag fick skrivit rätt kod men mina senare tester fungerade och jag kunde jobba vidare. Jag kolllade en hel del på inspelningarna från kursen samt Ursulas repo på github.
 
+Hade en trello plan som jag försökte följa:
+https://trello.com/invite/b/2e9fkadw/b28242cbf8dbbbcb5a38d1082633851b/webserver
+
 ### Lite olika lösningar:
 Jag valde att göra en så enkel design som möjligt, vi hade valet att göra automatiska tester men i och med att jag inte fick till de manuella testerna valde jag att nöja mig med dem när jag väl fick dem att fungera. Jag höll mig till standard font och en minimal färgpalett. 
 

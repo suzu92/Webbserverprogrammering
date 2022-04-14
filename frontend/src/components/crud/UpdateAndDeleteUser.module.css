@@ -11,6 +11,7 @@
 .dropdownContent {
     display: none;
     position: absolute;
+    color: white;
     background-color: black;
     overflow: auto;
     z-index: 1;
